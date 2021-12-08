@@ -7,7 +7,7 @@ import './App.css';
 
 const Main = () => {
 
-  let singleChoicePollAddress = "0x041F5057A1e03B724A99E828eCF5926343679A77";
+  let singleChoicePollAddress = "0x78c7B39E730aADa4d1040bBB682CB46D9cCf2EFC";
 
   const [errorMessage, setErrorMessage] = useState(null);
   const [defaultAccount, setDefaultAccount] = useState(null);
@@ -117,8 +117,6 @@ else{
       <h1>
         Interact with SingleChoicePoll
       </h1>
-      <br />
-
       <button id ="btn" class= "button button1" onClick={connectWalletHandler}>{connectButtonText}</button>
       <h3>Address : {defaultAccount}</h3>
       <br />
@@ -152,7 +150,7 @@ else{
 
       <form onSubmit={getPollResult}>
       Poll Id : <input id="pollId" type = "number" required/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button type={"submit"}>Get Poll Result</button>
+        <button type={"submit"}>Query Poll</button>
       </form>
       <br />
 
@@ -163,13 +161,13 @@ else{
 <table>
 <tr>
 <th><h3>Choice</h3></th>
-
- {options && options.map((option) => <td>{option}</td>)}
+&nbsp;
+ {options && options.map((option) => <td>{option}&nbsp;</td>)}
 </tr>
 <tr>
-<th><h3>Number of votes</h3></th>
-
- {result && result.map((res) => <td>{res.toNumber()}</td>)}
+<th><h3>Number of votes </h3></th>
+&nbsp;
+ {result && result.map((res) => <td>{res.toNumber()}&nbsp;</td>)}
 </tr>
 </table>
 
